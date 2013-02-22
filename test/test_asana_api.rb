@@ -6,6 +6,16 @@ require 'test_helper'
 
 class AsanaApiTest < Test::Unit::TestCase
 
+  context "an Asana API class" do
+
+    should "have necessary constants" do
+      assert_equal "https://app.asana.com/api", AsanaApi::URL_STUB
+      assert_equal "1.0", AsanaApi::API_VERSION
+      assert_equal "https://app.asana.com/api/1.0/", AsanaApi::API_URL
+    end
+
+  end
+
   context "an Asana API instance" do
 
     should "allow assignment of API key on initialization" do
